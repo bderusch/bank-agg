@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import SpendingChart from "./SpendingChart";
 import IncomeChart from "./IncomeChart";
-import { supabase } from "@/lib/supabase";
 
 interface FinancialChartsProps {
   spendingData?: {
@@ -104,27 +103,12 @@ const FinancialCharts: React.FC<FinancialChartsProps> = ({
         setIsLoading(true);
         setError(null);
 
-        // Call the Supabase Edge Function
-        const { data, error } = await supabase.functions.invoke(
-          "supabase-functions-financial-data",
-          {
-            body: { userId: "current-user" }, // In a real app, you'd pass the actual user ID
-          },
-        );
+        // Simulate API call with mock data
+        await new Promise(resolve => setTimeout(resolve, 1000));
 
-        if (error) {
-          throw new Error(error.message);
-        }
-
-        if (data) {
-          // Only update if we actually got data back
-          if (data.spendingData) {
-            setSpendingData(data.spendingData);
-          }
-          if (data.incomeData) {
-            setIncomeData(data.incomeData);
-          }
-        }
+        // Use default data for now
+        setSpendingData(defaultSpendingData);
+        setIncomeData(defaultIncomeData);
       } catch (err) {
         console.error("Error fetching financial data:", err);
         setError(

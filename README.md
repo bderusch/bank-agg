@@ -7,7 +7,6 @@ A modern web application for bank account aggregation and management.
 - Modern React with TypeScript
 - Vite for fast development and building
 - Tailwind CSS for styling
-- Supabase for backend services
 - Error boundary handling
 - Responsive design
 - Component library with Radix UI
@@ -16,7 +15,6 @@ A modern web application for bank account aggregation and management.
 
 - Node.js (v16 or higher)
 - npm or yarn
-- Supabase account and project
 
 ## Getting Started
 
@@ -38,8 +36,6 @@ Create a `.env` file in the root directory with the following variables:
 ```env
 VITE_TEMPO=false
 VITE_BASE_PATH=/
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
 4. Start the development server:
@@ -55,7 +51,6 @@ yarn dev
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
-- `npm run types:supabase` - Generate Supabase types
 
 ## Project Structure
 
