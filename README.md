@@ -1,3 +1,96 @@
+# Bank Aggregation Platform
+
+A modern web application for bank account aggregation and management.
+
+## Features
+
+- Modern React with TypeScript
+- Vite for fast development and building
+- Tailwind CSS for styling
+- Supabase for backend services
+- Error boundary handling
+- Responsive design
+- Component library with Radix UI
+
+## Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+- Supabase account and project
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd bank-agg
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Set up environment variables:
+Create a `.env` file in the root directory with the following variables:
+```env
+VITE_TEMPO=false
+VITE_BASE_PATH=/
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+4. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run types:supabase` - Generate Supabase types
+
+## Project Structure
+
+```
+src/
+├── components/     # React components
+├── lib/           # Utility functions and shared logic
+├── types/         # TypeScript type definitions
+├── stories/       # Storybook stories
+└── App.tsx        # Main application component
+```
+
+## Development Tools
+
+- **Tempo DevTools**: A development tool for component development and testing
+  - Enabled when `VITE_TEMPO=true` in environment variables
+  - Provides additional development features and debugging capabilities
+
+## Error Handling
+
+The application includes:
+- Global error boundary for catching runtime errors
+- Graceful fallback UI for error states
+- Loading states for async operations
+
+## Contributing
+
+1. Create a feature branch
+2. Make your changes
+3. Submit a pull request
+
+## License
+
+[Your License]
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
